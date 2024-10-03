@@ -5,38 +5,39 @@ import toast, { Toaster } from "react-hot-toast";
 // import Spinner from "../components/Spinner";
 import { useContext } from "react";
 import { AuthContext } from "../authContext/AuthContext";
+import { GoArrowLeft } from "react-icons/go";
 
 const LoginPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const {loginEmailPassword} = useContext(AuthContext);
+  const { loginEmailPassword, googleLogin } = useContext(AuthContext);
   // google sign in
-//   const handleGoogleSignIn = () => {
-//     googleSignIn()
-//       .then((result) => {
-//         setLoading(false);
-//         navigate(location?.state ? location.state : "/");
-//         toast.success("Login successful");
-//       })
-//       .catch((err) => {
-//         setLoading(false);
-//         toast.error(err.message);
-//       });
-//   };
-//   // github sign in
-//   const handleGithubSignIn = () => {
-//     githubSignIn()
-//       .then((result) => {
-//         setLoading(false);
-//         navigate(location?.state ? location.state : "/");
-//         toast.success("Login successful");
-//       })
-//       .catch((err) => {
-//         // console.log(err)
-//         setLoading(false);
-//         toast.error(err.message);
-//       });
-//   };
+  const handleGoogleSignIn = () => {
+    googleLogin()
+      .then((result) => {
+        // setLoading(false);
+        navigate(location?.state ? location.state : "/");
+        toast.success("Login successful");
+      })
+      .catch((err) => {
+        // setLoading(false);
+        toast.error(err.message);
+      });
+  };
+  //   // github sign in
+  //   const handleGithubSignIn = () => {
+  //     githubSignIn()
+  //       .then((result) => {
+  //         setLoading(false);
+  //         navigate(location?.state ? location.state : "/");
+  //         toast.success("Login successful");
+  //       })
+  //       .catch((err) => {
+  //         // console.log(err)
+  //         setLoading(false);
+  //         toast.error(err.message);
+  //       });
+  //   };
 
   // Handle Login
   const handleLogin = (e) => {
@@ -60,7 +61,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="gadgetContainer">
+    <div className="container mx-auto">
       {/* {loading && <Spinner />} */}
       <div className="flex md:justify-between items-center justify-center flex-wrap gap-4">
         <img className="h-[100px]" src={logo} alt="" />
@@ -68,7 +69,7 @@ const LoginPage = () => {
           Not a member?
           <Link
             className="px-3 ml-3 py-2 bg-[#FF497C] hover:bg-[#ab3154] rounded text-white font-semibold"
-            to="/signUp"
+            to="/register"
           >
             Sign Up
           </Link>
@@ -79,7 +80,7 @@ const LoginPage = () => {
         onClick={() => navigate("/")}
         className="text-lg font-semibold text-[#FF497C] my-3 cursor-pointer hover:bg-[#FF497C] inline-block rounded py-1 px-2 hover:text-white duration-200"
       >
-        <i className="bx bx-left-arrow-alt"></i> <span>Back Home</span>
+        <GoArrowLeft className="inline-block" /> <span>Back Home</span>
       </p>
 
       <div className="border shadow-lg mt-10">
@@ -112,7 +113,7 @@ const LoginPage = () => {
 
               <div className="flex items-center flex-wrap md:flex-nowrap gap-4 mb-4">
                 <button
-                //   onClick={() => handleGoogleSignIn()}
+                  onClick={() => handleGoogleSignIn()}
                   className="w-full max-w-md font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline"
                 >
                   <div className="bg-white p-2 rounded-full">
@@ -139,7 +140,7 @@ const LoginPage = () => {
                 </button>
 
                 <button
-                //   onClick={() => handleGithubSignIn()}
+                  //   onClick={() => handleGithubSignIn()}
                   className="w-full max-w-md font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline"
                 >
                   <div className="bg-white p-1 rounded-full">

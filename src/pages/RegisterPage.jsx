@@ -1,17 +1,44 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import signUp from "../assets/signUp.jpg";
 import logo from "../assets/logo.png";
 import toast, { Toaster } from "react-hot-toast";
 // import Spinner from "../components/Spinner";
 import { useContext } from "react";
 import { AuthContext } from "../authContext/AuthContext";
+import { GoArrowLeft } from "react-icons/go";
 
 const RegisterPage = () => {
   const navigate = useNavigate();
-//   const location = useLocation();
+  const location = useLocation();
 
-  const {createUser} = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
 
+  // // google sign in
+  // const handleGoogleSignIn = () => {
+  //   googleSignIn()
+  //     .then((result) => {
+  //       setLoading(false);
+  //       navigate(location?.state ? location.state : "/");
+  //       toast.success("Login successful");
+  //     })
+  //     .catch((err) => {
+  //       setLoading(false);
+  //       toast.error(err.message);
+  //     });
+  // };
+  // // github sign in
+  // const handleGithubSignIn = () => {
+  //   githubSignIn()
+  //     .then((result) => {
+  //       setLoading(false);
+  //       navigate(location?.state ? location.state : "/");
+  //       toast.success("Login successful");
+  //     })
+  //     .catch((err) => {
+  //       setLoading(false);
+  //       toast.error(err.message);
+  //     });
+  // };
 
   // Handle SignUp email password
   const handleSignUp = (e) => {
@@ -43,9 +70,8 @@ const RegisterPage = () => {
     console.log("after");
     //create user
     createUser(email, password)
-      .then((result) => {
-        toast.success("Registration successful");
-        return;
+      .then(() => {
+        toast.success("Acount Create Successfully");
       })
       .catch((err) => {
         toast.error(err.message);
@@ -56,14 +82,14 @@ const RegisterPage = () => {
     <div>
       {/* {loading && <Spinner />} */}
 
-      <div className="gadgetContainer pb-10">
+      <div className="container mx-auto pb-10">
         <div className="flex md:justify-between items-center justify-center flex-wrap gap-4">
           <img className="h-[100px]" src={logo} alt="" />
           <div>
             Already a member?
             <Link
               className="px-3 ml-3 py-2 bg-[#FF497C] hover:bg-[#ab3154] rounded text-white font-semibold"
-              to="/signIn"
+              to="/login"
             >
               Sign In
             </Link>
@@ -74,7 +100,7 @@ const RegisterPage = () => {
           onClick={() => navigate("/")}
           className="text-lg font-semibold text-[#FF497C] my-3 cursor-pointer hover:bg-[#FF497C] inline-block rounded py-1 px-2 hover:text-white duration-200"
         >
-          <i className="bx bx-left-arrow-alt"></i> <span>Back Home</span>
+          <GoArrowLeft className="inline-block" /> <span>Back Home</span>
         </p>
 
         <div className="border shadow-lg mt-10">

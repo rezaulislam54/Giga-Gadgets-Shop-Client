@@ -1,28 +1,30 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-// import logo from "../../assets/logo.png";
+import { AuthContext } from "../authContext/AuthContext";
+import logo from "../assets/logo.png";
 const Navber = () => {
+  const { user } = useContext(AuthContext);
   const navlink = (
     <>
-      <NavLink>
+      <NavLink to={"/"}>
         <li>Home</li>
       </NavLink>
-      <NavLink>
+      <NavLink to={"/add-product"}>
         <li>Add Product</li>
       </NavLink>
-      <NavLink>
+      <NavLink to={"/my-cart"}>
         <li>My Cart</li>
       </NavLink>
-      <NavLink>
+      <NavLink to={"my-added"}>
         <li>My Added Product</li>
       </NavLink>
     </>
   );
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 ">
       <div className="navbar-start">
-        <Link className="btn btn-ghost text-xl">
-          {/* <img src={logo} alt="" /> */}
-          Giga Gadgets
+        <Link>
+          <img className="h-[90px]" src={logo} alt="" />
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -32,38 +34,42 @@ const Navber = () => {
       </div>
       <div className="navbar-end gap-3">
         {/* profile Icons  */}
-        <div className="dropdown dropdown-end">
-          <div
-            tabIndex={0}
-            role="button"
-            className="btn btn-ghost btn-circle avatar"
-          >
-            <div className="w-10 rounded-full">
-              <img
-                alt="Tailwind CSS Navbar component"
-                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-              />
+        {user ? (
+          <div className="dropdown dropdown-end">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
+            >
+              <div className="w-10 rounded-full">
+                <img alt="" src={user?.photoURL} />
+              </div>
             </div>
+            <ul
+              tabIndex={0}
+              className=" menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            >
+              <li>
+                <a className="justify-between">
+                  Profile
+                  <span className="badge">New</span>
+                </a>
+              </li>
+              <li>
+                <a>Settings</a>
+              </li>
+              <li>
+                <a>Logout</a>
+              </li>
+            </ul>
           </div>
-          <ul
-            tabIndex={0}
-            className=" menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-          >
-            <li>
-              <a className="justify-between">
-                Profile
-                <span className="badge">New</span>
-              </a>
-            </li>
-            <li>
-              <a>Settings</a>
-            </li>
-            <li>
-              <a>Logout</a>
-            </li>
-          </ul>
-        </div>
-
+        ) : (
+          <Link to={"/login"}>
+            <button className="bg-[#ff487c] text-white px-7 py-1 font-semibold rounded-md">
+              Login
+            </button>
+          </Link>
+        )}
         {/* Menu Icons */}
 
         <div className="dropdown">
