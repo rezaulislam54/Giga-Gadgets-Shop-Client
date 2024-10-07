@@ -9,7 +9,6 @@ import { GoArrowLeft } from "react-icons/go";
 
 const RegisterPage = () => {
   const navigate = useNavigate();
-  const location = useLocation();
 
   const { createUser } = useContext(AuthContext);
 
