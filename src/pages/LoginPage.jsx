@@ -1,43 +1,68 @@
 import signIn from "../assets/signIn.jpg";
 import logo from "../assets/logo.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import toast, { Toaster } from "react-hot-toast";
 // import Spinner from "../components/Spinner";
 import { useContext } from "react";
 import { AuthContext } from "../authContext/AuthContext";
 import { GoArrowLeft } from "react-icons/go";
+import Swal from "sweetalert2";
 
 const LoginPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { loginEmailPassword, googleLogin } = useContext(AuthContext);
+  const { loginEmailPassword, googleLogin, githubLogin } =
+    useContext(AuthContext);
   // google sign in
   const handleGoogleSignIn = () => {
     googleLogin()
       .then((result) => {
+        console.log(result.user);
         // setLoading(false);
         navigate(location?.state ? location.state : "/");
-        toast.success("Login successful");
+        Swal.fire({
+          title: "Success!",
+          text: "User Login Successfully!",
+          icon: "success",
+          confirmButtonText: "Ok",
+        });
       })
       .catch((err) => {
         // setLoading(false);
-        toast.error(err.message);
+        Swal.fire({
+          title: "error!",
+          text: err.message,
+          icon: "error",
+          confirmButtonText: "Ok",
+        });
       });
   };
-  //   // github sign in
-  //   const handleGithubSignIn = () => {
-  //     githubSignIn()
-  //       .then((result) => {
-  //         setLoading(false);
-  //         navigate(location?.state ? location.state : "/");
-  //         toast.success("Login successful");
-  //       })
-  //       .catch((err) => {
-  //         // console.log(err)
-  //         setLoading(false);
-  //         toast.error(err.message);
-  //       });
-  //   };
+
+  // github sign in
+
+  const handleGithubSignIn = () => {
+    githubLogin()
+      .then((result) => {
+        console.log(result.user);
+        // setLoading(false);
+        navigate(location?.state ? location.state : "/");
+        Swal.fire({
+          title: "Success!",
+          text: "User Login Successfully!",
+          icon: "success",
+          confirmButtonText: "Ok",
+        });
+      })
+      .catch((err) => {
+        // console.log(err)
+        // setLoading(false);
+        Swal.fire({
+          title: "error!",
+          text: err.message,
+          icon: "error",
+          confirmButtonText: "Ok",
+        });
+      });
+  };
 
   // Handle Login
   const handleLogin = (e) => {
@@ -49,14 +74,25 @@ const LoginPage = () => {
     // Sign In
     loginEmailPassword(email, password)
       .then((result) => {
+        console.log(result.user);
         // setLoading(false);
         navigate(location?.state ? location.state : "/");
-        toast.success("Login successful");
+        Swal.fire({
+          title: "Success!",
+          text: "User Login Successfully!",
+          icon: "success",
+          confirmButtonText: "Ok",
+        });
       })
       .catch((err) => {
         console.log(err);
         // setLoading(false);
-        toast.error(err.message);
+        Swal.fire({
+          title: "error!",
+          text: err.message,
+          icon: "error",
+          confirmButtonText: "Ok",
+        });
       });
   };
 
@@ -140,7 +176,7 @@ const LoginPage = () => {
                 </button>
 
                 <button
-                  //   onClick={() => handleGithubSignIn()}
+                  onClick={handleGithubSignIn}
                   className="w-full max-w-md font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline"
                 >
                   <div className="bg-white p-1 rounded-full">
@@ -199,11 +235,6 @@ const LoginPage = () => {
           </div>
         </div>
       </div>
-      <Toaster
-        toastOptions={{
-          duration: 3000,
-        }}
-      />
     </div>
   );
 };

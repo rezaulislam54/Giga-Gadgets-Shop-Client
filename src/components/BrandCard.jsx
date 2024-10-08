@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 
-const BrandCard = ({ brand }) => {
-  //   const navigate = useNavigate();
-  const { brandName, imageURL } = brand || {};
+const BrandCard = ({ brands }) => {
+  const navigate = useNavigate();
+  const { brandName, imageURL } = brands || {};
   return (
     <div
-      onClick={() => navigate(`/brand/${brandName}`)}
+      onClick={() => navigate(`/products/${brandName}`)}
       className=" w-full group  cursor-pointer "
     >
       <div className=" shadow-lg p-5 w-full bg-white dark:bg-[#1a2641d5] border rounded">

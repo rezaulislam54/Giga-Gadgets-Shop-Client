@@ -2,8 +2,22 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../authContext/AuthContext";
 import logo from "../assets/logo.png";
+import Swal from "sweetalert2";
 const Navber = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleSignOut = (e) => {
+    e.preventDefault();
+    logOut().then(() => {
+      Swal.fire({
+        title: "Success!",
+        text: "User Logout Successfully!",
+        icon: "success",
+        confirmButtonText: "Ok",
+      });
+    });
+  };
+
   const navlink = (
     <>
       <NavLink to={"/"}>
@@ -15,7 +29,7 @@ const Navber = () => {
       <NavLink to={"/my-cart"}>
         <li>My Cart</li>
       </NavLink>
-      <NavLink to={"my-added"}>
+      <NavLink to={`/myadded/${user.email}`}>
         <li>My Added Product</li>
       </NavLink>
     </>
@@ -36,7 +50,7 @@ const Navber = () => {
         <div className="navbar-end gap-3">
           {/* profile Icons  */}
           {user ? (
-            <div className="dropdown dropdown-end">
+            <div className="dropdown dropdown-end hidden md:flex">
               <div
                 tabIndex={0}
                 role="button"
@@ -48,7 +62,7 @@ const Navber = () => {
               </div>
               <ul
                 tabIndex={0}
-                className=" menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                className=" menu menu-sm dropdown-content bg-base-100 rounded-box z-[5] mt-14 w-52 p-3 shadow"
               >
                 <li>
                   <a className="justify-between">
@@ -59,7 +73,7 @@ const Navber = () => {
                 <li>
                   <a>Settings</a>
                 </li>
-                <li>
+                <li onClick={handleSignOut}>
                   <a>Logout</a>
                 </li>
               </ul>
@@ -101,16 +115,21 @@ const Navber = () => {
                 className="btn btn-ghost btn-circle avatar mx-auto mt-5"
               >
                 <div className="w-10 rounded-full">
-                  <img
-                    alt="Tailwind CSS Navbar component"
-                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-                  />
+                  {user ? (
+                    <img src={user.photoURL} />
+                  ) : (
+                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  )}
                 </div>
               </div>
               <h1 className="text-center">
                 <p> Md Rezaul Islam</p>
-                <button className="bg-[#ff487c] text-white w-full py-1 my-4 rounded-sm">
-                  LogOut
+
+                <button
+                  onClick={handleSignOut}
+                  className="bg-[#ff487c] text-white w-full py-1 my-4 rounded-sm"
+                >
+                  {user ? "LogOut" : "Login"}
                 </button>
               </h1>
             </ul>

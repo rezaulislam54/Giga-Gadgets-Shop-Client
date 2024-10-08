@@ -6,6 +6,7 @@ import RegisterPage from "../pages/RegisterPage";
 import MyCartPage from "../pages/MyCartPage";
 import AddProductPage from "../pages/AddProductPage";
 import MyAddedProductPage from "../pages/MyAddedProductPage";
+import BrandProductPage from "../pages/BrandProductPage";
 
 const Routes = createBrowserRouter([
   {
@@ -25,8 +26,16 @@ const Routes = createBrowserRouter([
         element: <MyCartPage></MyCartPage>,
       },
       {
-        path: "/my-added",
+        path: "/myadded/:email",
         element: <MyAddedProductPage></MyAddedProductPage>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/products/${params.email}`),
+      },
+      {
+        path: "/products/:brand",
+        element: <BrandProductPage></BrandProductPage>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/products/${params.brand}`),
       },
     ],
   },

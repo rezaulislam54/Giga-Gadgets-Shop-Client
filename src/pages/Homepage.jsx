@@ -7,7 +7,7 @@ import { FaQuoteRight } from "react-icons/fa";
 const Homepage = () => {
   const [brandName, setbrandName] = useState([]);
   const [products, setproducts] = useState([]);
-  const [productslength, setproductslength] = useState(6);
+  const [productslength, setproductslength] = useState(8);
 
   useEffect(() => {
     fetch("http://localhost:5000/products")
@@ -43,8 +43,8 @@ const Homepage = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5 my-8">
-          {brandName?.map((brand) => (
-            <BrandCard key={brand._id} brand={brand}></BrandCard>
+          {brandName?.map((brands) => (
+            <BrandCard key={brands._id} brands={brands}></BrandCard>
           ))}
         </div>
       </div>

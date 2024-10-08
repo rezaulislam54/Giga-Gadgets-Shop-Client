@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../authContext/AuthContext";
 
 const AddProductPage = () => {
+  const { user } = useContext(AuthContext);
+
   const handleAddProduct = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -10,11 +14,20 @@ const AddProductPage = () => {
     const brand = e.target.brand.value;
     const description = e.target.description.value;
     const rating = e.target.rating.value;
-    //  const email = user.email;
+    const email = user.email;
+    const lop = { name, price, image, type, email };
+    console.log(lop);
 
-    // console.log(name, price, image, type)
-
-    const info = { name, price, image, type, brand, rating, description };
+    const info = {
+      name,
+      price,
+      image,
+      type,
+      brand,
+      rating,
+      description,
+      email,
+    };
 
     fetch("http://localhost:5000/products", {
       method: "POST",

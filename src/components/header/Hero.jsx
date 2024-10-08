@@ -33,7 +33,7 @@ const Hero = () => {
             <div className="md:h-[500px] h-auto">
               <div className="h-full flex flex-col md:flex-row justify-between md:gap-2 gap-10 items-center">
                 <div className="flex-1 mt-10 md:mt-0 w-full md:w-auto">
-                  <div className="font-semibold flex items-center text-[#FF497C] mb-3 text-center md:text-left">
+                  <div className="font-semibold flex items-center text-[#FF497C] md:mb-3 justify-center md:justify-start md:text-left">
                     <h2 className="bg-[#FF497C] text-white text-xl h-8 w-8 flex items-center mr-3 p-2 rounded-full">
                       <SiFireship />
                     </h2>
@@ -74,7 +74,7 @@ const Hero = () => {
             <div className="md:h-[500px] h-auto">
               <div className="h-full flex flex-col md:flex-row justify-between md:gap-2 gap-10 items-center">
                 <div className="flex-1 mt-10 md:mt-0 w-full md:w-auto">
-                  <div className="font-semibold flex items-center text-[#FF497C] mb-3 text-center md:text-left">
+                  <div className="font-semibold flex justify-center md:justify-start items-center text-[#FF497C] md:mb-3 text-center md:text-left">
                     <h2 className="bg-[#FF497C] text-white text-xl h-8 w-8 flex items-center mr-3 p-2 rounded-full">
                       <SiFireship />
                     </h2>
@@ -115,7 +115,7 @@ const Hero = () => {
             <div className="md:h-[500px] h-auto">
               <div className="h-full flex flex-col md:flex-row justify-between md:gap-2 gap-10 items-center">
                 <div className="flex-1 mt-10 md:mt-0 w-full md:w-auto">
-                  <div className="font-semibold flex items-center text-[#FF497C] mb-3 text-center md:text-left">
+                  <div className="font-semibold flex justify-center md:justify-start items-center text-[#FF497C] md:mb-3 text-center md:text-left">
                     <h2 className="bg-[#FF497C] text-white text-xl h-8 w-8 flex items-center mr-3 p-2 rounded-full">
                       <SiFireship />
                     </h2>
