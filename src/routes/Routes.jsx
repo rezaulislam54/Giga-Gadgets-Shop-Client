@@ -7,6 +7,9 @@ import MyCartPage from "../pages/MyCartPage";
 import AddProductPage from "../pages/AddProductPage";
 import MyAddedProductPage from "../pages/MyAddedProductPage";
 import BrandProductPage from "../pages/BrandProductPage";
+import ProductDetails from "../pages/ProductDetails";
+import PrivetRoutes from "./PrivetRoutes";
+import ProductUpdate from "../pages/ProductUpdate";
 
 const Routes = createBrowserRouter([
   {
@@ -23,19 +26,36 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/my-cart",
-        element: <MyCartPage></MyCartPage>,
+        element: (
+          <PrivetRoutes>
+            <MyCartPage></MyCartPage>
+          </PrivetRoutes>
+        ),
       },
       {
-        path: "/myadded/:email",
-        element: <MyAddedProductPage></MyAddedProductPage>,
-        loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.email}`),
+        path: "/myadded",
+        element: (
+          <PrivetRoutes>
+            <MyAddedProductPage></MyAddedProductPage>
+          </PrivetRoutes>
+        ),
       },
       {
         path: "/products/:brand",
         element: <BrandProductPage></BrandProductPage>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/products/${params.brand}`),
+      },
+      {
+        path: "/products/:id",
+        element: <ProductDetails></ProductDetails>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/products/${params.id}`),
+      },
+
+      {
+        path: "/product/update/:id",
+        element: <ProductUpdate></ProductUpdate>,
       },
     ],
   },

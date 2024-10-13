@@ -29,7 +29,7 @@ const Navber = () => {
       <NavLink to={"/my-cart"}>
         <li>My Cart</li>
       </NavLink>
-      <NavLink to={`/myadded/${user.email}`}>
+      <NavLink to={"/myadded"}>
         <li>My Added Product</li>
       </NavLink>
     </>

@@ -5,7 +5,6 @@ import ProductCard from "../components/ProductCard";
 
 const BrandProductPage = () => {
   const brandProduct = useLoaderData();
-  console.log(brandProduct);
   const { brand } = useParams();
   return (
     <div className="">
@@ -27,9 +26,13 @@ const BrandProductPage = () => {
 
         {/* {products} */}
 
-        <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-4 mt-10">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2  gap-4 mt-10">
           {brandProduct?.map((product) => (
-            <ProductCard key={product._id} item={product}></ProductCard>
+            <ProductCard
+              brandPage={true}
+              key={product._id}
+              item={product}
+            ></ProductCard>
           ))}
         </div>
       </div>

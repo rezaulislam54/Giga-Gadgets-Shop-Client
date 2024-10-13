@@ -66,7 +66,7 @@ const Homepage = () => {
         </div>
 
         {/* Product container */}
-        <div className="grid xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-4 mt-10">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-4 mt-10">
           {products?.slice(0 - productslength).map((item) => (
             <ProductCard key={item._id} item={item} />
           ))}

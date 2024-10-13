@@ -65,25 +65,46 @@ const ProductCard = ({ brandPage, item }) => {
 
               <div className="flex space-x-2 text-sm font-medium justify-start mt-5">
                 {brandPage ? (
-                  <button
-                    onClick={() => navigate(`/product/update/${_id}`)}
-                    className="transition flex-1 ease-in duration-300 flex items-center text-sm font-medium  md:mb-0 bg-[#FF497C] px-5 py-2 md:py-1 hover:shadow-lg tracking-wider text-white rounded hover:bg-[#ab3154] text-center justify-center "
-                  >
-                    <span className="text-center">Update</span>
-                  </button>
-                ) : (
-                  ""
-                )}
-                <button
-                  onClick={() => navigate(`/products/${_id}`)}
-                  className="transition flex-1 ease-in duration-300 bg-gray-700 hover:bg-gray-800 border hover:border-gray-500 border-gray-700 hover:text-white  hover:shadow-lg text-white rounded py-2 md:py-1 text-center  flex justify-center items-center px-4 font-medium text-sm"
-                >
-                  <span className=" mr-2">
-                    <i className="bx bxs-low-vision"></i>
-                  </span>
+                  <>
+                    <button
+                      onClick={() => navigate(`/product/update/${_id}`)}
+                      className="transition flex-1 ease-in duration-300 flex items-center text-sm font-medium  md:mb-0 bg-[#FF497C] px-5 py-2 md:py-1 hover:shadow-lg tracking-wider text-white rounded hover:bg-[#ab3154] text-center justify-center "
+                    >
+                      <span className="text-center">Update</span>
+                    </button>
 
-                  <span>Details</span>
-                </button>
+                    <button
+                      onClick={`/products/${_id}`}
+                      className="transition flex-1 ease-in duration-300 bg-gray-700 hover:bg-gray-800 border hover:border-gray-500 border-gray-700 hover:text-white  hover:shadow-lg text-white rounded py-2 md:py-1 text-center  flex justify-center items-center px-4 font-medium text-sm"
+                    >
+                      <span className=" mr-2">
+                        <i className="bx bxs-low-vision"></i>
+                      </span>
+
+                      <span>Details</span>
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button
+                      onClick={`/products/${_id}`}
+                      className="transition flex-1 ease-in duration-300 bg-gray-700 hover:bg-gray-800 border hover:border-gray-500 border-gray-700 hover:text-white  hover:shadow-lg text-white rounded py-2 md:py-1 text-center  flex justify-center items-center px-4 font-medium text-sm"
+                    >
+                      <span className=" mr-2">
+                        <i className="bx bxs-low-vision"></i>
+                      </span>
+
+                      <span>Details</span>
+                    </button>
+
+                    <button
+                      onClick={() => navigate(`/product/update/${_id}`)}
+                      className="transition flex-1 ease-in duration-300 flex items-center text-sm font-medium  md:mb-0 bg-[#FF497C] px-5 py-2 md:py-1 hover:shadow-lg tracking-wider text-white rounded hover:bg-[#ab3154] text-center justify-center "
+                    >
+                      <span className="text-center">Add Cart</span>
+                    </button>
+                  </>
+                )}
               </div>
             </div>
           </div>
