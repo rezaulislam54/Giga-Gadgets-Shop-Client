@@ -6,18 +6,17 @@ import { useLoaderData } from "react-router-dom";
 const ProductDetails = () => {
   const product = useLoaderData();
   console.log(product);
-  const { image, brandName, rating, productName, description, price, type } =
-    product;
+  const { image, name, rating, brand, description, price, type } = product;
 
   return (
-    <div className="gadgetContainer my-20 flex gap-10">
-      <div className="p-4 border rounded-sm">
-        <img src={image} alt="" />
+    <div className="container mx-auto my-20 flex gap-10">
+      <div className="p-4 border rounded-sm flex-1 flex items-center justify-center ">
+        <img className="rounded-lg w-11/12 h-4/5" src={image} alt="" />
       </div>
-      <div className="mt-6">
+      <div className="mt-6 flex-1">
         <div className="border-b-2 pb-2">
-          <h2>{brandName}</h2>
-          <h1 className="text-2xl font-semibold">{productName}</h1>
+          <h2>{brand}</h2>
+          <h1 className="text-2xl font-semibold my-2">{name}</h1>
           <div className="flex gap-5 my-2">
             <p className="border-r-2 pr-4"> Rating : {rating}</p>
             <div className="flex gap-2 text-xl">

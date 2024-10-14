@@ -1,5 +1,10 @@
+import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
+
 const ProductUpdate = () => {
-  const handleAddProduct = (e) => {
+  const loadededProduct = useLoaderData();
+
+  const handleUpdateProduct = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const price = e.target.price.value;
@@ -8,8 +13,6 @@ const ProductUpdate = () => {
     const brand = e.target.brand.value;
     const description = e.target.description.value;
     const rating = e.target.rating.value;
-    const lop = { name, price, image, type };
-    console.log(lop);
 
     const info = {
       name,
@@ -20,30 +23,30 @@ const ProductUpdate = () => {
       rating,
       description,
     };
-    console.log(info);
+    // console.log(info);
 
-    //    fetch("http://localhost:5000/products", {
-    //      method: "POST",
-    //      headers: { "Content-type": "application/json" },
-    //      body: JSON.stringify(info),
-    //    })
-    //      .then((res) => res.json())
-    //      .then((data) => {
-    //        console.log(data);
-    //        if (data?.insertedId) {
-    //          Swal.fire({
-    //            title: "Success!",
-    //            text: "Product Updated Successfully!",
-    //            icon: "success",
-    //            confirmButtonText: "Ok",
-    //          });
-    //        }
-    //      });
+    fetch(`http://localhost:5000/products/${loadededProduct._id}`, {
+      method: "PUT",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(info),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount) {
+          Swal.fire({
+            title: "Success!",
+            text: "Product Updated Successfully!",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
+        }
+      });
   };
 
   return (
     <div className="container mx-auto pt-5">
-      <div className="shadow-lg p-5 border dark:bg-[#1a2641d5]">
+      <div className="shadow-lg p-5 border dark:bg-[#1a2641d5] rounded-lg">
         {/* Heading */}
         <div className="mt-5 mb-8">
           <p className="text-center text-3xl font-semibold">
@@ -59,7 +62,7 @@ const ProductUpdate = () => {
           </p>
         </div>
         {/* form */}
-        <form onSubmit={handleAddProduct}>
+        <form onSubmit={handleUpdateProduct}>
           <div className="flex gap-8 ">
             <div className="flex-1">
               <label className="block mb-2 dark:text-white" htmlFor="name">
@@ -69,6 +72,7 @@ const ProductUpdate = () => {
                 className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                 type="text"
                 placeholder="Name"
+                defaultValue={loadededProduct.name}
                 id="name"
                 name="name"
               />
@@ -81,6 +85,7 @@ const ProductUpdate = () => {
               </label>
               <select
                 name="brand"
+                defaultValue={loadededProduct.brand}
                 id="brand"
                 className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                 type="text"
@@ -129,6 +134,7 @@ const ProductUpdate = () => {
                 type="text"
                 placeholder="Enter Price"
                 id="Price"
+                defaultValue={loadededProduct.price}
                 name="price"
               />
             </div>
@@ -141,6 +147,7 @@ const ProductUpdate = () => {
                 className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                 type="text"
                 placeholder="Enter Image URL"
+                defaultValue={loadededProduct.image}
                 id="image"
                 name="image"
               />
@@ -151,6 +158,7 @@ const ProductUpdate = () => {
                 className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                 type="text"
                 placeholder="Enter type"
+                defaultValue={loadededProduct.type}
                 id="type"
                 name="type"
               />
@@ -168,6 +176,7 @@ const ProductUpdate = () => {
                 min={0}
                 type="number"
                 placeholder="Enter Rating"
+                defaultValue={loadededProduct.rating}
                 id="rating"
                 name="rating"
               />
@@ -175,12 +184,13 @@ const ProductUpdate = () => {
           </div>
 
           <label className="block mb-2 dark:text-white" htmlFor="name">
-            Name
+            Description
           </label>
           <input
             className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
             type="text"
             placeholder="Description"
+            defaultValue={loadededProduct.description}
             id="description"
             name="description"
           />
@@ -188,7 +198,7 @@ const ProductUpdate = () => {
           <input
             className="px-4 w-full py-2 mt-4 rounded hover:bg-[#ab3154]  bg-[#FF497C] duration-200 text-white cursor-pointer font-semibold"
             type="submit"
-            value="Add Product"
+            value="Update Product"
           />
         </form>
       </div>

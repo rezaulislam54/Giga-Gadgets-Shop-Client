@@ -182,7 +182,7 @@ const AddProductPage = () => {
           </div>
 
           <label className="block mb-2 dark:text-white" htmlFor="name">
-            Name
+            Description
           </label>
           <input
             className="w-full p-2 border rounded-md focus:outline-[#FF497C]"

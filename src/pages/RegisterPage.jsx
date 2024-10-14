@@ -95,14 +95,7 @@ const RegisterPage = () => {
           </div>
         </div>
 
-        <p
-          onClick={() => navigate("/")}
-          className="text-lg font-semibold text-[#FF497C] my-3 cursor-pointer hover:bg-[#FF497C] inline-block rounded py-1 px-2 hover:text-white duration-200"
-        >
-          <GoArrowLeft className="inline-block" /> <span>Back Home</span>
-        </p>
-
-        <div className="border shadow-lg mt-10">
+        <div className="border shadow-lg rounded-lg">
           <div className="w-full  flex">
             <div
               className="w-full  bg-gray-400 hidden lg:block  bg-no-repeat  lg:w-1/2  rounded-l-lg "
@@ -112,7 +105,13 @@ const RegisterPage = () => {
                 backgroundOrigin: "content-box",
               }}
             >
-              <p className="font-bold text-3xl mt-20 mx-6">
+              <p
+                onClick={() => navigate("/")}
+                className="text-lg font-semibold text-[#FF497C] m-5 cursor-pointer hover:bg-[#FF497C] inline-block rounded py-1 px-2 hover:text-white duration-200"
+              >
+                <GoArrowLeft className="inline-block" /> <span>Back Home</span>
+              </p>
+              <p className="font-bold text-3xl mt-5 mx-6">
                 We Offer the <br />
                 Best Products
               </p>

@@ -74,7 +74,7 @@ const ProductCard = ({ brandPage, item }) => {
                     </button>
 
                     <button
-                      onClick={`/products/${_id}`}
+                      onClick={`/product/${_id}`}
                       className="transition flex-1 ease-in duration-300 bg-gray-700 hover:bg-gray-800 border hover:border-gray-500 border-gray-700 hover:text-white  hover:shadow-lg text-white rounded py-2 md:py-1 text-center  flex justify-center items-center px-4 font-medium text-sm"
                     >
                       <span className=" mr-2">
@@ -87,7 +87,7 @@ const ProductCard = ({ brandPage, item }) => {
                 ) : (
                   <>
                     <button
-                      onClick={`/products/${_id}`}
+                      onClick={() => navigate(`/product/${_id}`)}
                       className="transition flex-1 ease-in duration-300 bg-gray-700 hover:bg-gray-800 border hover:border-gray-500 border-gray-700 hover:text-white  hover:shadow-lg text-white rounded py-2 md:py-1 text-center  flex justify-center items-center px-4 font-medium text-sm"
                     >
                       <span className=" mr-2">
