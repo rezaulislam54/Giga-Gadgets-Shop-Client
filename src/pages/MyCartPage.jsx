@@ -1,38 +1,55 @@
+// import CartProduct from "../components/CartProduct";
+
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../authContext/AuthContext";
 import CartProduct from "../components/CartProduct";
+import Swal from "sweetalert2";
 
 const MyCart = () => {
   const { user } = useContext(AuthContext);
   const [myproducts, setmyproducts] = useState([]);
-  const url = `https://coffee-shop-server-jd3g.onrender.com/myCarts/${user?.email}`;
+  const url = `http://localhost:5000/carts/email/${user?.email}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
         setmyproducts(data);
       });
-  }, [user]);
+  }, [url]);
 
-  // let totalPrice = 0;
-  // let totalShipping = 0;
-  // let quantity = 0;
-  // for (const product of myproducts) {
-  //   // if(product.quantity === 0){
-  //   //     product.quantity = 1;
-  //   // }
-  //   // product.quantity = product.quantity || 1;
-
-  //   totalPrice = totalPrice + product.price * authquantity;
-  //   totalShipping = totalShipping + product.shipping;
-  //   quantity = quantity + authquantity;
-  // }
-  // const tax = (totalPrice * 7) / 100;
-
-  // const grandTotal = totalPrice + totalShipping + tax;
+  const handleProductDelete = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/carts/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            const remainingmy = myproducts.filter((c) => c._id !== id);
+            setmyproducts(remainingmy);
+            if (data.deleteCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success",
+              });
+            }
+          });
+      }
+    });
+  };
 
   return (
-    <div className="my-10">
+    <div className="container mx-auto my-10">
       <div className="grid grid-cols-1 lg:grid-cols-4 border rounded-lg px-3 md:px-0 shadow-lg">
         <div className="col-span-3 md:p-6 ">
           <div className="flex justify-between md:mx-10 pb-3 border-b-2">
@@ -59,13 +76,14 @@ const MyCart = () => {
                 key={product._id}
                 myproducts={myproducts}
                 setmyproducts={setmyproducts}
+                handleProductDelete={handleProductDelete}
                 product={product}
               ></CartProduct>
             ))}
           </div>
         </div>
 
-        <div className=" p-6 md:border-l-2 rounded-lg">
+        <div className=" p-6 md:border-l-2 border-b-2 h-fit rounded-lg">
           <h1 className="text-2xl font-bold border-b-2 pb-3">Order Summary</h1>
           <div className="flex justify-between items-center my-7">
             <h2>
