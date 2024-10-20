@@ -4,7 +4,7 @@ import img3 from "../../assets/Hero/lgMonitor.png";
 
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 const BrandAdvertise = () => {
   return (
@@ -17,11 +17,7 @@ const BrandAdvertise = () => {
             delay: 2500,
             disableOnInteraction: false,
           }}
-          pagination={{
-            clickable: true,
-          }}
-          navigation={true}
-          modules={[Autoplay, Pagination, Navigation]}
+          modules={[Autoplay]}
           className="mySwiper"
         >
           {/* One */}

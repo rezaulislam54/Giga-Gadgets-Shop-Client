@@ -30,7 +30,7 @@ const Navber = () => {
         <li>My Cart</li>
       </NavLink>
       <NavLink to={"/myadded"}>
-        <li>My Added Product</li>
+        <li>My Products</li>
       </NavLink>
     </>
   );
@@ -116,7 +116,7 @@ const Navber = () => {
               >
                 <div className="w-10 rounded-full">
                   {user ? (
-                    <img src={user.photoURL} />
+                    <img src={user?.photoURL} />
                   ) : (
                     <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
                   )}

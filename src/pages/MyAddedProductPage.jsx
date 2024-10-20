@@ -3,24 +3,23 @@ import { AuthContext } from "../authContext/AuthContext";
 import ProductCard from "../components/ProductCard";
 
 const MyAddedProductPage = () => {
-  const { user, setloading } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
   const [items, setitems] = useState();
   console.log(items);
 
+  const url = `http://localhost:5000/products/email/${user?.email}`;
+
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${user?.email}`)
+    fetch(url)
       .then((res) => res.json())
-      .then((data) => {
-        setitems(data);
-        setloading(false);
-      });
-  }, [user]);
+      .then((data) => setitems(data));
+  }, [url]);
 
   return (
-    <div>
+    <div className="container mx-auto">
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-4 mt-10">
         {items?.map((item) => (
-          <ProductCard key={item._id} item={item} />
+          <ProductCard key={item._id} item={item} myproducts={true} />
         ))}
       </div>
     </div>

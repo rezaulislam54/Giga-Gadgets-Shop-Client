@@ -4,7 +4,7 @@ import heroImg3 from "../../assets/Hero/applelaptop.png";
 import { EffectFade, Autoplay } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import "../../components/Swiper.css";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-fade";
@@ -13,7 +13,7 @@ import { BiHive } from "react-icons/bi";
 
 const Hero = () => {
   return (
-    <div className=" lg:h-[500px]  bg-gradient-to-r from-[#F9F3F0] from-10% via-[#FCE7DC] via-30% to-[#F9F3F0] to-90% dark:bg-gradient-to-r dark:from-[#f2f2d8] dark:from-10% dark:via-[#FCE7DC] dark:via-30% dark:to-[#fae1d4]">
+    <div className="h-[550px] bg-gradient-to-r from-[#F9F3F0] from-10% via-[#FCE7DC] via-30% to-[#F9F3F0] to-90% dark:bg-gradient-to-r dark:from-[#f2f2d8] dark:from-10% dark:via-[#FCE7DC] dark:via-30% dark:to-[#fae1d4]">
       <div className="container mx-auto">
         <Swiper
           effect={"fade"}
@@ -102,7 +102,7 @@ const Hero = () => {
                 {/* left */}
                 <div className="w-full md:max-h-[400px]  flex-1 mb-10 md:mb-0">
                   <img
-                    className="md:h-[350px] h-[250px] object-cover w-full"
+                    className="md:h-[300px] h-[250px] object-cover w-full"
                     src={heroImg2}
                     alt=""
                   />

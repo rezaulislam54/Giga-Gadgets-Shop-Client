@@ -9,22 +9,24 @@ import { GoArrowLeft } from "react-icons/go";
 
 const RegisterPage = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const { createUser } = useContext(AuthContext);
+  const { createUser, googleLogin, setLoading } = useContext(AuthContext);
 
-  // // google sign in
-  // const handleGoogleSignIn = () => {
-  //   googleSignIn()
-  //     .then((result) => {
-  //       setLoading(false);
-  //       navigate(location?.state ? location.state : "/");
-  //       toast.success("Login successful");
-  //     })
-  //     .catch((err) => {
-  //       setLoading(false);
-  //       toast.error(err.message);
-  //     });
-  // };
+  // google sign in
+  const handleGoogleSignIn = () => {
+    googleLogin()
+      .then((result) => {
+        console.log(result.user);
+        setLoading(false);
+        navigate(location?.state ? location.state : "/");
+        toast.success("Login successful");
+      })
+      .catch((err) => {
+        setLoading(false);
+        toast.error(err.message);
+      });
+  };
   // // github sign in
   // const handleGithubSignIn = () => {
   //   githubSignIn()
@@ -129,7 +131,7 @@ const RegisterPage = () => {
 
                 <div className="flex items-center flex-wrap md:flex-nowrap gap-4 mb-4">
                   <button
-                    // onClick={() => handleGoogleSignIn()}
+                    onClick={() => handleGoogleSignIn()}
                     className="w-full max-w-md font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline"
                   >
                     <div className="bg-white p-2 rounded-full">

@@ -29,7 +29,7 @@ const TestimonialsSlide = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="flex bg-gradient-to-r from-[#F9F3F0] from-10% via-[#FCE7DC] via-30% to-[#F9F3F0] to-90% dark:bg-gradient-to-r dark:from-[#0F172A] dark:from-10% dark:via-[#0F172A] dark:via-30% dark:to-[#0F172A]">
+          <div className="flex ">
             <div className="p-4 md:w-1/2 ">
               <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
                 <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
@@ -87,297 +87,7 @@ const TestimonialsSlide = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex bg-gradient-to-r from-[#F9F3F0] from-10% via-[#FCE7DC] via-30% to-[#F9F3F0] to-90% dark:bg-gradient-to-r dark:from-[#0F172A] dark:from-10% dark:via-[#0F172A] dark:via-30% dark:to-[#0F172A]">
-            <div className="p-4 md:w-1/2 ">
-              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
-                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
-                <p className="leading-relaxed text-start  mb-6">
-                  I recently purchased the Apple MacBook Air, and I must say,
-                  I&apos;m thoroughly impressed with this fantastic piece of
-                  technology. From its design to its performance, it has
-                  exceeded my expectations in every way.
-                </p>
-                <div className="flex">
-                  <div className="w-12 h-12 rounded-full">
-                    <img
-                      alt="testimonial"
-                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
-                    />
-                  </div>
-                  <div className="pl-4">
-                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
-                      Mr. x
-                    </h2>
-                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
-                      DESIGNER
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="p-4 md:w-1/2">
-              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
-                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
-                <p className="leading-relaxed text-start  mb-6">
-                  I recently purchased the Apple MacBook Air, and I must say,
-                  I&apos;m thoroughly impressed with this fantastic piece of
-                  technology. From its design to its performance, it has
-                  exceeded my expectations in every way.
-                </p>
-                <div className="flex">
-                  <div className="w-12 h-12 rounded-full">
-                    <img
-                      alt="testimonial"
-                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
-                    />
-                  </div>
-                  <div className="pl-4">
-                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
-                      Mr. x
-                    </h2>
-                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
-                      DESIGNER
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex bg-gradient-to-r from-[#F9F3F0] from-10% via-[#FCE7DC] via-30% to-[#F9F3F0] to-90% dark:bg-gradient-to-r dark:from-[#0F172A] dark:from-10% dark:via-[#0F172A] dark:via-30% dark:to-[#0F172A]">
-            <div className="p-4 md:w-1/2 ">
-              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
-                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
-                <p className="leading-relaxed text-start  mb-6">
-                  I recently purchased the Apple MacBook Air, and I must say,
-                  I&apos;m thoroughly impressed with this fantastic piece of
-                  technology. From its design to its performance, it has
-                  exceeded my expectations in every way.
-                </p>
-                <div className="flex">
-                  <div className="w-12 h-12 rounded-full">
-                    <img
-                      alt="testimonial"
-                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
-                    />
-                  </div>
-                  <div className="pl-4">
-                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
-                      Mr. x
-                    </h2>
-                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
-                      DESIGNER
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="p-4 md:w-1/2">
-              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
-                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
-                <p className="leading-relaxed text-start  mb-6">
-                  I recently purchased the Apple MacBook Air, and I must say,
-                  I&apos;m thoroughly impressed with this fantastic piece of
-                  technology. From its design to its performance, it has
-                  exceeded my expectations in every way.
-                </p>
-                <div className="flex">
-                  <div className="w-12 h-12 rounded-full">
-                    <img
-                      alt="testimonial"
-                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
-                    />
-                  </div>
-                  <div className="pl-4">
-                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
-                      Mr. x
-                    </h2>
-                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
-                      DESIGNER
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex bg-gradient-to-r from-[#F9F3F0] from-10% via-[#FCE7DC] via-30% to-[#F9F3F0] to-90% dark:bg-gradient-to-r dark:from-[#0F172A] dark:from-10% dark:via-[#0F172A] dark:via-30% dark:to-[#0F172A]">
-            <div className="p-4 md:w-1/2 ">
-              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
-                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
-                <p className="leading-relaxed text-start  mb-6">
-                  I recently purchased the Apple MacBook Air, and I must say,
-                  I&apos;m thoroughly impressed with this fantastic piece of
-                  technology. From its design to its performance, it has
-                  exceeded my expectations in every way.
-                </p>
-                <div className="flex">
-                  <div className="w-12 h-12 rounded-full">
-                    <img
-                      alt="testimonial"
-                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
-                    />
-                  </div>
-                  <div className="pl-4">
-                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
-                      Mr. x
-                    </h2>
-                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
-                      DESIGNER
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="p-4 md:w-1/2">
-              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
-                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
-                <p className="leading-relaxed text-start  mb-6">
-                  I recently purchased the Apple MacBook Air, and I must say,
-                  I&apos;m thoroughly impressed with this fantastic piece of
-                  technology. From its design to its performance, it has
-                  exceeded my expectations in every way.
-                </p>
-                <div className="flex">
-                  <div className="w-12 h-12 rounded-full">
-                    <img
-                      alt="testimonial"
-                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
-                    />
-                  </div>
-                  <div className="pl-4">
-                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
-                      Mr. x
-                    </h2>
-                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
-                      DESIGNER
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex bg-gradient-to-r from-[#F9F3F0] from-10% via-[#FCE7DC] via-30% to-[#F9F3F0] to-90% dark:bg-gradient-to-r dark:from-[#0F172A] dark:from-10% dark:via-[#0F172A] dark:via-30% dark:to-[#0F172A]">
-            <div className="p-4 md:w-1/2 ">
-              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
-                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
-                <p className="leading-relaxed text-start  mb-6">
-                  I recently purchased the Apple MacBook Air, and I must say,
-                  I&apos;m thoroughly impressed with this fantastic piece of
-                  technology. From its design to its performance, it has
-                  exceeded my expectations in every way.
-                </p>
-                <div className="flex">
-                  <div className="w-12 h-12 rounded-full">
-                    <img
-                      alt="testimonial"
-                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
-                    />
-                  </div>
-                  <div className="pl-4">
-                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
-                      Mr. x
-                    </h2>
-                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
-                      DESIGNER
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="p-4 md:w-1/2">
-              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
-                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
-                <p className="leading-relaxed text-start  mb-6">
-                  I recently purchased the Apple MacBook Air, and I must say,
-                  I&apos;m thoroughly impressed with this fantastic piece of
-                  technology. From its design to its performance, it has
-                  exceeded my expectations in every way.
-                </p>
-                <div className="flex">
-                  <div className="w-12 h-12 rounded-full">
-                    <img
-                      alt="testimonial"
-                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
-                    />
-                  </div>
-                  <div className="pl-4">
-                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
-                      Mr. x
-                    </h2>
-                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
-                      DESIGNER
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex bg-gradient-to-r from-[#F9F3F0] from-10% via-[#FCE7DC] via-30% to-[#F9F3F0] to-90% dark:bg-gradient-to-r dark:from-[#0F172A] dark:from-10% dark:via-[#0F172A] dark:via-30% dark:to-[#0F172A]">
-            <div className="p-4 md:w-1/2 ">
-              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
-                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
-                <p className="leading-relaxed text-start  mb-6">
-                  I recently purchased the Apple MacBook Air, and I must say,
-                  I&apos;m thoroughly impressed with this fantastic piece of
-                  technology. From its design to its performance, it has
-                  exceeded my expectations in every way.
-                </p>
-                <div className="flex">
-                  <div className="w-12 h-12 rounded-full">
-                    <img
-                      alt="testimonial"
-                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
-                    />
-                  </div>
-                  <div className="pl-4">
-                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
-                      Mr. x
-                    </h2>
-                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
-                      DESIGNER
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="p-4 md:w-1/2">
-              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
-                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
-                <p className="leading-relaxed text-start  mb-6">
-                  I recently purchased the Apple MacBook Air, and I must say,
-                  I&apos;m thoroughly impressed with this fantastic piece of
-                  technology. From its design to its performance, it has
-                  exceeded my expectations in every way.
-                </p>
-                <div className="flex">
-                  <div className="w-12 h-12 rounded-full">
-                    <img
-                      alt="testimonial"
-                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
-                    />
-                  </div>
-                  <div className="pl-4">
-                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
-                      Mr. x
-                    </h2>
-                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
-                      DESIGNER
-                    </h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="flex bg-gradient-to-r from-[#F9F3F0] from-10% via-[#FCE7DC] via-30% to-[#F9F3F0] to-90% dark:bg-gradient-to-r dark:from-[#0F172A] dark:from-10% dark:via-[#0F172A] dark:via-30% dark:to-[#0F172A]">
+          <div className="flex ">
             <div className="p-4 md:w-1/2 ">
               <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
                 <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
@@ -493,7 +203,297 @@ const TestimonialsSlide = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex bg-gradient-to-r from-[#F9F3F0] from-10% via-[#FCE7DC] via-30% to-[#F9F3F0] to-90% dark:bg-gradient-to-r dark:from-[#0F172A] dark:from-10% dark:via-[#0F172A] dark:via-30% dark:to-[#0F172A]">
+          <div className="flex ">
+            <div className="p-4 md:w-1/2 ">
+              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
+                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
+                <p className="leading-relaxed text-start  mb-6">
+                  I recently purchased the Apple MacBook Air, and I must say,
+                  I&apos;m thoroughly impressed with this fantastic piece of
+                  technology. From its design to its performance, it has
+                  exceeded my expectations in every way.
+                </p>
+                <div className="flex">
+                  <div className="w-12 h-12 rounded-full">
+                    <img
+                      alt="testimonial"
+                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
+                    />
+                  </div>
+                  <div className="pl-4">
+                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
+                      Mr. x
+                    </h2>
+                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
+                      DESIGNER
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="p-4 md:w-1/2">
+              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
+                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
+                <p className="leading-relaxed text-start  mb-6">
+                  I recently purchased the Apple MacBook Air, and I must say,
+                  I&apos;m thoroughly impressed with this fantastic piece of
+                  technology. From its design to its performance, it has
+                  exceeded my expectations in every way.
+                </p>
+                <div className="flex">
+                  <div className="w-12 h-12 rounded-full">
+                    <img
+                      alt="testimonial"
+                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
+                    />
+                  </div>
+                  <div className="pl-4">
+                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
+                      Mr. x
+                    </h2>
+                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
+                      DESIGNER
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex ">
+            <div className="p-4 md:w-1/2 ">
+              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
+                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
+                <p className="leading-relaxed text-start  mb-6">
+                  I recently purchased the Apple MacBook Air, and I must say,
+                  I&apos;m thoroughly impressed with this fantastic piece of
+                  technology. From its design to its performance, it has
+                  exceeded my expectations in every way.
+                </p>
+                <div className="flex">
+                  <div className="w-12 h-12 rounded-full">
+                    <img
+                      alt="testimonial"
+                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
+                    />
+                  </div>
+                  <div className="pl-4">
+                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
+                      Mr. x
+                    </h2>
+                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
+                      DESIGNER
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="p-4 md:w-1/2">
+              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
+                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
+                <p className="leading-relaxed text-start  mb-6">
+                  I recently purchased the Apple MacBook Air, and I must say,
+                  I&apos;m thoroughly impressed with this fantastic piece of
+                  technology. From its design to its performance, it has
+                  exceeded my expectations in every way.
+                </p>
+                <div className="flex">
+                  <div className="w-12 h-12 rounded-full">
+                    <img
+                      alt="testimonial"
+                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
+                    />
+                  </div>
+                  <div className="pl-4">
+                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
+                      Mr. x
+                    </h2>
+                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
+                      DESIGNER
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex ">
+            <div className="p-4 md:w-1/2 ">
+              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
+                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
+                <p className="leading-relaxed text-start  mb-6">
+                  I recently purchased the Apple MacBook Air, and I must say,
+                  I&apos;m thoroughly impressed with this fantastic piece of
+                  technology. From its design to its performance, it has
+                  exceeded my expectations in every way.
+                </p>
+                <div className="flex">
+                  <div className="w-12 h-12 rounded-full">
+                    <img
+                      alt="testimonial"
+                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
+                    />
+                  </div>
+                  <div className="pl-4">
+                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
+                      Mr. x
+                    </h2>
+                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
+                      DESIGNER
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="p-4 md:w-1/2">
+              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
+                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
+                <p className="leading-relaxed text-start  mb-6">
+                  I recently purchased the Apple MacBook Air, and I must say,
+                  I&apos;m thoroughly impressed with this fantastic piece of
+                  technology. From its design to its performance, it has
+                  exceeded my expectations in every way.
+                </p>
+                <div className="flex">
+                  <div className="w-12 h-12 rounded-full">
+                    <img
+                      alt="testimonial"
+                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
+                    />
+                  </div>
+                  <div className="pl-4">
+                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
+                      Mr. x
+                    </h2>
+                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
+                      DESIGNER
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex ">
+            <div className="p-4 md:w-1/2 ">
+              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
+                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
+                <p className="leading-relaxed text-start  mb-6">
+                  I recently purchased the Apple MacBook Air, and I must say,
+                  I&apos;m thoroughly impressed with this fantastic piece of
+                  technology. From its design to its performance, it has
+                  exceeded my expectations in every way.
+                </p>
+                <div className="flex">
+                  <div className="w-12 h-12 rounded-full">
+                    <img
+                      alt="testimonial"
+                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
+                    />
+                  </div>
+                  <div className="pl-4">
+                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
+                      Mr. x
+                    </h2>
+                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
+                      DESIGNER
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="p-4 md:w-1/2">
+              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
+                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
+                <p className="leading-relaxed text-start  mb-6">
+                  I recently purchased the Apple MacBook Air, and I must say,
+                  I&apos;m thoroughly impressed with this fantastic piece of
+                  technology. From its design to its performance, it has
+                  exceeded my expectations in every way.
+                </p>
+                <div className="flex">
+                  <div className="w-12 h-12 rounded-full">
+                    <img
+                      alt="testimonial"
+                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
+                    />
+                  </div>
+                  <div className="pl-4">
+                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
+                      Mr. x
+                    </h2>
+                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
+                      DESIGNER
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex ">
+            <div className="p-4 md:w-1/2 ">
+              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
+                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
+                <p className="leading-relaxed text-start  mb-6">
+                  I recently purchased the Apple MacBook Air, and I must say,
+                  I&apos;m thoroughly impressed with this fantastic piece of
+                  technology. From its design to its performance, it has
+                  exceeded my expectations in every way.
+                </p>
+                <div className="flex">
+                  <div className="w-12 h-12 rounded-full">
+                    <img
+                      alt="testimonial"
+                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
+                    />
+                  </div>
+                  <div className="pl-4">
+                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
+                      Mr. x
+                    </h2>
+                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
+                      DESIGNER
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="p-4 md:w-1/2">
+              <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
+                <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
+                <p className="leading-relaxed text-start  mb-6">
+                  I recently purchased the Apple MacBook Air, and I must say,
+                  I&apos;m thoroughly impressed with this fantastic piece of
+                  technology. From its design to its performance, it has
+                  exceeded my expectations in every way.
+                </p>
+                <div className="flex">
+                  <div className="w-12 h-12 rounded-full">
+                    <img
+                      alt="testimonial"
+                      src="https://i.ibb.co/TKYdH3g/girl1.jpg"
+                    />
+                  </div>
+                  <div className="pl-4">
+                    <h2 className="title-font font-medium text-gray-900 dark:text-white">
+                      Mr. x
+                    </h2>
+                    <h2 className="text-gray-500 dark:text-gray-200 text-sm">
+                      DESIGNER
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="flex">
             <div className="p-4 md:w-1/2 ">
               <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
                 <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
