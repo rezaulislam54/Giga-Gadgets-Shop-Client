@@ -1,10 +1,38 @@
+import { useContext } from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
+import { AuthContext } from "../authContext/AuthContext";
 
-const ProductCard = ({ myproducts, item }) => {
+const ProductCard = ({ myproducts, item, handleProductDelete }) => {
+  const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   const { _id, name, brand, price, image, type, rating } = item || {};
-  // const brandPage = true
+  console.log(item);
+
+  const email = user?.email;
+
+  const handleProductCart = (_id, name, brand, price, image, email) => {
+    const Info = { _id, name, brand, price, image, email };
+    fetch("http://localhost:5000/carts", {
+      method: "POST",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify(Info),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data?.insertedId) {
+          Swal.fire({
+            title: "Success!",
+            text: "Product Updated Successfully!",
+            icon: "success",
+            confirmButtonText: "Ok",
+          });
+        }
+      });
+  };
+
   return (
     <div>
       <div className="">
@@ -74,7 +102,7 @@ const ProductCard = ({ myproducts, item }) => {
                     </button>
 
                     <button
-                      onClick={`/product/${_id}`}
+                      onClick={() => handleProductDelete(_id)}
                       className="transition flex-1 ease-in duration-300 bg-gray-700 hover:bg-gray-800 border hover:border-gray-500 border-gray-700 hover:text-white  hover:shadow-lg text-white rounded py-2 md:py-1 text-center  flex justify-center items-center  font-medium text-sm"
                     >
                       <span>Delete</span>
@@ -94,7 +122,16 @@ const ProductCard = ({ myproducts, item }) => {
                     </button>
 
                     <button
-                      onClick={() => navigate(`/product/update/${_id}`)}
+                      onClick={() =>
+                        handleProductCart(
+                          item._id,
+                          item.name,
+                          item.brand,
+                          item.price,
+                          item.image,
+                          email
+                        )
+                      }
                       className="transition flex-1 ease-in duration-300 flex items-center text-sm font-medium  md:mb-0 bg-[#FF497C]  py-2 md:py-1 hover:shadow-lg tracking-wider text-white rounded hover:bg-[#ab3154] text-center justify-center "
                     >
                       <span className="text-center">Add Cart</span>

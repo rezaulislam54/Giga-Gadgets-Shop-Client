@@ -1,5 +1,4 @@
 import heroImg1 from "../../assets/Hero/2.png";
-import heroImg2 from "../../assets/Hero/lgFreeze.png";
 import heroImg3 from "../../assets/Hero/applelaptop.png";
 import { EffectFade, Autoplay } from "swiper/modules";
 
@@ -103,7 +102,7 @@ const Hero = () => {
                 <div className="w-full md:max-h-[400px]  flex-1 mb-10 md:mb-0">
                   <img
                     className="md:h-[300px] h-[250px] object-cover w-full"
-                    src={heroImg2}
+                    src="https://res.cloudinary.com/dvp64j4a3/image/upload/v1729418856/1-1-removebg-preview_z4i2jt.png"
                     alt=""
                   />
                 </div>

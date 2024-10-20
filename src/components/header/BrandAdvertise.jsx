@@ -1,6 +1,5 @@
 import img1 from "../../assets/Hero/applelaptop.png";
 import img2 from "../../assets/Hero/sonycemera.png";
-import img3 from "../../assets/Hero/lgMonitor.png";
 
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -34,7 +33,7 @@ const BrandAdvertise = () => {
                 </div>
                 {/* left */}
                 <div className="flex-1 mt-10 md:mt-0 w-full md:w-auto relative">
-                  <div className="absolute p-5 w-40 h-40 flex justify-center items-center rounded-full bg-[#FF497C] md:top-40 top-16 md:right-10 right-0 ">
+                  <div className="absolute p-5 w-40 h-40 hidden md:flex justify-center items-center rounded-full bg-[#FF497C] md:top-40 top-16 md:right-10 right-0 ">
                     <p className="text-xl rounded-full text-white bg-[#FF497C] font-semibold text-center ">
                       New Price: <br /> 230$
                     </p>
@@ -75,7 +74,7 @@ const BrandAdvertise = () => {
             <div className="md:h-[600px] h-auto pb-5">
               <div className="h-full  flex flex-col md:flex-row justify-between space-x-5 md:gap-2 gap-2 items-center">
                 {/* right */}
-                <div className="w-full md:h-[400px] h-[250px] flex-1 mb-10 md:mb-0">
+                <div className="w-full md:h-[350px] h-[200px] px-24 flex-1 mb-10 md:mb-0">
                   <img
                     className="h-full object-fill w-full"
                     src={img2}
@@ -84,7 +83,7 @@ const BrandAdvertise = () => {
                 </div>
                 {/* left */}
                 <div className="flex-1 mt-10 md:mt-0 w-full md:w-auto relative">
-                  <div className="absolute p-5 w-40 h-40 flex justify-center items-center rounded-full bg-[#FF497C] md:top-40 top-16 md:right-10 right-0 ">
+                  <div className="absolute p-5 w-40 h-40 hidden md:flex justify-center items-center rounded-full bg-[#FF497C] md:top-40 top-16 md:right-10 right-0 ">
                     <p className="text-xl rounded-full text-white bg-[#FF497C] font-semibold text-center ">
                       New Price: <br /> 899$
                     </p>
@@ -128,13 +127,13 @@ const BrandAdvertise = () => {
                 <div className="w-full md:h-[400px] h-[250px] flex-1 mb-10 md:mb-0">
                   <img
                     className="h-full object-fill w-full"
-                    src={img3}
+                    src="https://res.cloudinary.com/dvp64j4a3/image/upload/v1729418853/pc-power--removebg-preview_xsny3s.png"
                     alt=""
                   />
                 </div>
                 {/* left */}
                 <div className="flex-1 mt-10 md:mt-0 w-full md:w-auto relative">
-                  <div className="absolute p-5 w-40 h-40 flex justify-center items-center rounded-full bg-[#FF497C] md:top-40 top-16 md:right-10 right-0 ">
+                  <div className="absolute hidden  p-5 w-40 h-40 md:flex justify-center items-center rounded-full bg-[#FF497C] md:top-40 top-16 md:right-10 right-0 ">
                     <p className="text-xl rounded-full text-white bg-[#FF497C] font-semibold text-center ">
                       New Price: <br /> 499$
                     </p>
