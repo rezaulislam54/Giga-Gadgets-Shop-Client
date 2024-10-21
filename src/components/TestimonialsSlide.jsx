@@ -29,7 +29,7 @@ const TestimonialsSlide = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="flex ">
+          <div className="md:flex ">
             <div className="p-4 md:w-1/2 ">
               <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
                 <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
@@ -87,7 +87,7 @@ const TestimonialsSlide = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex ">
+          <div className="md:flex ">
             <div className="p-4 md:w-1/2 ">
               <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
                 <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
@@ -145,7 +145,7 @@ const TestimonialsSlide = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex">
+          <div className="md:flex">
             <div className="p-4 md:w-1/2 ">
               <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
                 <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
@@ -203,7 +203,7 @@ const TestimonialsSlide = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex ">
+          <div className="md:flex ">
             <div className="p-4 md:w-1/2 ">
               <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
                 <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
@@ -261,7 +261,7 @@ const TestimonialsSlide = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex ">
+          <div className="md:flex ">
             <div className="p-4 md:w-1/2 ">
               <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
                 <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
@@ -319,7 +319,7 @@ const TestimonialsSlide = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex ">
+          <div className="md:flex ">
             <div className="p-4 md:w-1/2 ">
               <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
                 <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
@@ -377,7 +377,7 @@ const TestimonialsSlide = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex ">
+          <div className="md:flex ">
             <div className="p-4 md:w-1/2 ">
               <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
                 <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
@@ -435,7 +435,7 @@ const TestimonialsSlide = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex ">
+          <div className="md:flex ">
             <div className="p-4 md:w-1/2 ">
               <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
                 <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />
@@ -493,7 +493,7 @@ const TestimonialsSlide = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="flex">
+          <div className="md:flex">
             <div className="p-4 md:w-1/2 ">
               <div className=" bg-gray-100 dark:bg-[#1a2641d5] shadow-lg p-4 rounded">
                 <FaQuoteRight className="w-5 h-5 text-gray-400 mb-4" />

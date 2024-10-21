@@ -3,7 +3,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../authContext/AuthContext";
 import CartProduct from "../components/CartProduct";
-import Swal from "sweetalert2";
 
 const MyCart = () => {
   const { user } = useContext(AuthContext);
@@ -16,37 +15,6 @@ const MyCart = () => {
         setmyproducts(data);
       });
   }, [url]);
-
-  const handleProductDelete = (id) => {
-    Swal.fire({
-      title: "Are you sure?",
-      text: "You won't be able to revert this!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, delete it!",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        fetch(`http://localhost:5000/carts/${id}`, {
-          method: "DELETE",
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            console.log(data);
-            const remainingmy = myproducts.filter((c) => c._id !== id);
-            setmyproducts(remainingmy);
-            if (data.deleteCount > 0) {
-              Swal.fire({
-                title: "Deleted!",
-                text: "Your file has been deleted.",
-                icon: "success",
-              });
-            }
-          });
-      }
-    });
-  };
 
   return (
     <div className="container mx-auto my-10">
@@ -76,7 +44,6 @@ const MyCart = () => {
                 key={product._id}
                 myproducts={myproducts}
                 setmyproducts={setmyproducts}
-                handleProductDelete={handleProductDelete}
                 product={product}
               ></CartProduct>
             ))}

@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../authContext/AuthContext";
+import { TbAlarmPlusFilled } from "react-icons/tb";
 
 const AddProductPage = () => {
   const { user } = useContext(AuthContext);
@@ -55,13 +56,13 @@ const AddProductPage = () => {
         <div className="mt-5 mb-8">
           <p className="text-center text-3xl font-semibold">
             <span className="mr-3 text-[#FF497C]">
-              <i className="bx bxs-alarm-add"></i>
+              <TbAlarmPlusFilled className="inline-block mb-1" />
             </span>
             <span className="dark:text-white">
               {/* <span className="text-[#FF497C]">
                 {update ? "Update " : "Add "}
               </span> */}
-              Your Product
+              Add Your Product
             </span>
           </p>
         </div>
