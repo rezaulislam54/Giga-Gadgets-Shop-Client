@@ -79,6 +79,7 @@ const AddProductPage = () => {
                 placeholder="Name"
                 id="name"
                 name="name"
+                required
               />
 
               <label
@@ -93,6 +94,7 @@ const AddProductPage = () => {
                 className="w-full p-2 border rounded-md focus:outline-[#FF497C]"
                 type="text"
                 placeholder="Select Brand"
+                required
               >
                 <option value="Huawei" selected>
                   Huawei
@@ -138,6 +140,7 @@ const AddProductPage = () => {
                 placeholder="Enter Price"
                 id="Price"
                 name="price"
+                required
               />
             </div>
             {/* Right side */}
@@ -151,6 +154,7 @@ const AddProductPage = () => {
                 placeholder="Enter Image URL"
                 id="image"
                 name="image"
+                required
               />
               <label className="block mb-2 mt-4 dark:text-white" htmlFor="type">
                 Type
@@ -161,6 +165,7 @@ const AddProductPage = () => {
                 placeholder="Enter type"
                 id="type"
                 name="type"
+                required
               />
 
               <label

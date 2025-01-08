@@ -25,7 +25,7 @@ const ProductCard = ({ myproducts, item, handleProductDelete }) => {
         if (data?.insertedId) {
           Swal.fire({
             title: "Success!",
-            text: "Product Updated Successfully!",
+            text: "Product add Successfully!",
             icon: "success",
             confirmButtonText: "Ok",
           });
