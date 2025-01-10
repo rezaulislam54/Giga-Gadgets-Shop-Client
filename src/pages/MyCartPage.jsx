@@ -7,7 +7,7 @@ import CartProduct from "../components/CartProduct";
 const MyCart = () => {
   const { user } = useContext(AuthContext);
   const [myproducts, setmyproducts] = useState([]);
-  const url = `http://localhost:5000/carts/email/${user?.email}`;
+  const url = `https://giga-gadgets-shop-server.vercel.app/carts/email/${user?.email}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())

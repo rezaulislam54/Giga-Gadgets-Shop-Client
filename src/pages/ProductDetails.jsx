@@ -13,7 +13,7 @@ const ProductDetails = () => {
   const { image, name, rating, brand, description, price, type } = product;
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://giga-gadgets-shop-server.vercel.app/products")
       .then((res) => res.json())
       .then((data) => {
         setproducts(data);

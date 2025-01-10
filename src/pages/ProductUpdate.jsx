@@ -25,11 +25,14 @@ const ProductUpdate = () => {
     };
     // console.log(info);
 
-    fetch(`http://localhost:5000/products/${loadededProduct._id}`, {
-      method: "PUT",
-      headers: { "Content-type": "application/json" },
-      body: JSON.stringify(info),
-    })
+    fetch(
+      `https://giga-gadgets-shop-server.vercel.app/products/${loadededProduct._id}`,
+      {
+        method: "PUT",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify(info),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

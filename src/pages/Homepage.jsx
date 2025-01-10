@@ -21,7 +21,7 @@ const Homepage = () => {
   const [productslength, setproductslength] = useState(8);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://giga-gadgets-shop-server.vercel.app/products")
       .then((res) => res.json())
       .then((data) => {
         setproducts(data);
@@ -29,7 +29,7 @@ const Homepage = () => {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:5000/brands")
+    fetch("https://giga-gadgets-shop-server.vercel.app/brands")
       .then((res) => res.json())
       .then((data) => {
         setbrandName(data);
