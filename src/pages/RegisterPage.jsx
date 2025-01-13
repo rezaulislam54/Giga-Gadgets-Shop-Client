@@ -6,40 +6,65 @@ import toast, { Toaster } from "react-hot-toast";
 import { useContext } from "react";
 import { AuthContext } from "../authContext/AuthContext";
 import { GoArrowLeft } from "react-icons/go";
+import Swal from "sweetalert2";
 
 const RegisterPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const { createUser, googleLogin, setLoading } = useContext(AuthContext);
+  const { createUser, googleLogin, githubLogin } = useContext(AuthContext);
 
   // google sign in
   const handleGoogleSignIn = () => {
     googleLogin()
       .then((result) => {
         console.log(result.user);
-        setLoading(false);
+        // setLoading(false);
         navigate(location?.state ? location.state : "/");
-        toast.success("Login successful");
+        Swal.fire({
+          title: "Success!",
+          text: "User Login Successfully!",
+          icon: "success",
+          confirmButtonText: "Ok",
+        });
       })
       .catch((err) => {
-        setLoading(false);
-        toast.error(err.message);
+        // setLoading(false);
+        Swal.fire({
+          title: "error!",
+          text: err.message,
+          icon: "error",
+          confirmButtonText: "Ok",
+        });
       });
   };
-  // // github sign in
-  // const handleGithubSignIn = () => {
-  //   githubSignIn()
-  //     .then((result) => {
-  //       setLoading(false);
-  //       navigate(location?.state ? location.state : "/");
-  //       toast.success("Login successful");
-  //     })
-  //     .catch((err) => {
-  //       setLoading(false);
-  //       toast.error(err.message);
-  //     });
-  // };
+
+  // github sign in
+
+  const handleGithubSignIn = () => {
+    githubLogin()
+      .then((result) => {
+        console.log(result.user);
+        // setLoading(false);
+        navigate(location?.state ? location.state : "/");
+        Swal.fire({
+          title: "Success!",
+          text: "User Login Successfully!",
+          icon: "success",
+          confirmButtonText: "Ok",
+        });
+      })
+      .catch((err) => {
+        // console.log(err)
+        // setLoading(false);
+        Swal.fire({
+          title: "error!",
+          text: err.message,
+          icon: "error",
+          confirmButtonText: "Ok",
+        });
+      });
+  };
 
   // Handle SignUp email password
   const handleSignUp = (e) => {
@@ -63,7 +88,7 @@ const RegisterPage = () => {
       return;
     }
     // Email Validation
-    if (!/^\w+([.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    if (!/^\w+([.-]?\w+)*@\w+([/.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
       toast.error("Please enter a valid email");
       return;
     }
@@ -122,7 +147,7 @@ const RegisterPage = () => {
             <div className="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none">
               <div className=" p-5 ">
                 <div className="pb-8">
-                  <p className="text-3xl font-bold mb-2">I'm New Here</p>
+                  <p className="text-3xl font-bold mb-2">I&apos;m New Here</p>
 
                   <p className="font-semibold text-black/60">
                     Enter your details below
@@ -158,7 +183,7 @@ const RegisterPage = () => {
                   </button>
 
                   <button
-                    // onClick={() => handleGithubSignIn()}
+                    onClick={() => handleGithubSignIn()}
                     className="w-full max-w-md font-bold shadow-sm rounded-lg py-3 bg-indigo-100 text-gray-800 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow focus:shadow-sm focus:shadow-outline"
                   >
                     <div className="bg-white p-1 rounded-full">
