@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../authContext/AuthContext";
 import logo from "../assets/logo.png";
 import Swal from "sweetalert2";
+import Spinar from "./Spinar";
 const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
 
@@ -20,16 +21,60 @@ const Navber = () => {
 
   const navlink = (
     <>
-      <NavLink to={"/"}>
+      <NavLink
+        to={"/"}
+        className={({ isActive, isPending }) =>
+          isPending ? (
+            <Spinar></Spinar>
+          ) : isActive ? (
+            "text-primary font-semibold md:border-b-2 border-[#FF497C]"
+          ) : (
+            "font-semibold"
+          )
+        }
+      >
         <li>Home</li>
       </NavLink>
-      <NavLink to={"/add-product"}>
+      <NavLink
+        to={"/add-product"}
+        className={({ isActive, isPending }) =>
+          isPending ? (
+            <Spinar></Spinar>
+          ) : isActive ? (
+            "text-primary font-semibold md:border-b-2 border-[#FF497C]"
+          ) : (
+            "font-semibold"
+          )
+        }
+      >
         <li>Add Product</li>
       </NavLink>
-      <NavLink to={"/my-cart"}>
+      <NavLink
+        to={"/my-cart"}
+        className={({ isActive, isPending }) =>
+          isPending ? (
+            <Spinar></Spinar>
+          ) : isActive ? (
+            "text-primary font-semibold md:border-b-2 border-[#FF497C]"
+          ) : (
+            "font-semibold"
+          )
+        }
+      >
         <li>My Cart</li>
       </NavLink>
-      <NavLink to={"/myadded"}>
+      <NavLink
+        to={"/myadded"}
+        className={({ isActive, isPending }) =>
+          isPending ? (
+            <Spinar></Spinar>
+          ) : isActive ? (
+            "text-primary font-semibold md:border-b-2 border-[#FF497C]"
+          ) : (
+            "font-semibold"
+          )
+        }
+      >
         <li>My Products</li>
       </NavLink>
     </>

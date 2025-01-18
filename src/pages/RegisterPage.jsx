@@ -7,6 +7,7 @@ import { useContext } from "react";
 import { AuthContext } from "../authContext/AuthContext";
 import { GoArrowLeft } from "react-icons/go";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const RegisterPage = () => {
   const navigate = useNavigate();
@@ -109,6 +110,9 @@ const RegisterPage = () => {
       {/* {loading && <Spinner />} */}
 
       <div className="container mx-auto pb-10">
+        <Helmet>
+          <title>Giga-Gadgets | Sign Up</title>
+        </Helmet>
         <div className="flex md:justify-between items-center justify-center flex-wrap gap-4">
           <img className="h-[100px]" src={logo} alt="" />
           <div>

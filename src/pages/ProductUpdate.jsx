@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -49,6 +50,10 @@ const ProductUpdate = () => {
 
   return (
     <div className="container mx-auto pt-5">
+      <Helmet>
+        <title>Giga-Gadgets | Product Update</title>
+      </Helmet>
+
       <div className="shadow-lg p-5 border dark:bg-[#1a2641d5] rounded-lg">
         {/* Heading */}
         <div className="mt-5 mb-8">
