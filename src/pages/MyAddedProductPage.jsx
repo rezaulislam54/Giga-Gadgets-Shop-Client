@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../authContext/AuthContext";
 import ProductCard from "../components/ProductCard";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const MyAddedProductPage = () => {
   const { user } = useContext(AuthContext);
@@ -49,6 +50,9 @@ const MyAddedProductPage = () => {
 
   return (
     <div className="container mx-auto">
+      <Helmet>
+        <title>Giga-Gadgets | My Product</title>
+      </Helmet>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1  gap-4 mt-10">
         {items?.map((item) => (
           <ProductCard

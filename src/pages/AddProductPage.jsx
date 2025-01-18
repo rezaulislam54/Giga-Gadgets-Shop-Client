@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../authContext/AuthContext";
 import { TbAlarmPlusFilled } from "react-icons/tb";
+import { Helmet } from "react-helmet";
 
 const AddProductPage = () => {
   const { user } = useContext(AuthContext);
@@ -51,6 +52,9 @@ const AddProductPage = () => {
 
   return (
     <div className="container mx-auto pt-5">
+      <Helmet>
+        <title>Giga-Gadgets | Add Product</title>
+      </Helmet>
       <div className="shadow-lg p-5 border dark:bg-[#1a2641d5]">
         {/* Heading */}
         <div className="mt-5 mb-8">

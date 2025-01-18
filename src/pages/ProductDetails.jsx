@@ -5,8 +5,10 @@ import { useLoaderData } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import { useEffect, useState } from "react";
 import { FaBagShopping } from "react-icons/fa6";
+import { Helmet } from "react-helmet";
 
 const ProductDetails = () => {
+  window.scrollTo(0, 0);
   const [Products, setproducts] = useState([]);
   const product = useLoaderData();
   console.log(product);
@@ -22,6 +24,10 @@ const ProductDetails = () => {
 
   return (
     <div className="container mx-auto my-20">
+      <Helmet>
+        <title>Giga-Gadgets | Product Details</title>
+      </Helmet>
+
       <div className=" flex gap-10">
         <div className="p-4 border rounded-lg flex-1 flex items-center justify-center ">
           <img className="rounded-lg w-11/12 h-4/5" src={image} alt="" />

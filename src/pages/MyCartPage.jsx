@@ -3,6 +3,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../authContext/AuthContext";
 import CartProduct from "../components/CartProduct";
+import { Helmet } from "react-helmet";
 
 const MyCart = () => {
   const { user } = useContext(AuthContext);
@@ -18,6 +19,9 @@ const MyCart = () => {
 
   return (
     <div className="container mx-auto my-10">
+      <Helmet>
+        <title>Giga-Gadgets | My Cart</title>
+      </Helmet>
       <div className="grid grid-cols-1 lg:grid-cols-4 border rounded-lg px-3 md:px-0 shadow-lg">
         <div className="col-span-3 md:p-6 ">
           <div className="flex justify-between md:mx-10 pb-3 border-b-2">
