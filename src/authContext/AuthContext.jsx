@@ -15,8 +15,28 @@ export const AuthContext = createContext(null);
 const AuthContextProvider = ({ children }) => {
   const [user, setuser] = useState([]);
   const [loading, setloading] = useState();
+  const [products, setproducts] = useState([]);
+  const [brandName, setbrandName] = useState([]);
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
+
+  const url = "https://giga-gadgets-shop-server.vercel.app/products";
+  useEffect(() => {
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        setproducts(data);
+      });
+  }, [url]);
+
+  useEffect(() => {
+    fetch("https://giga-gadgets-shop-server.vercel.app/brands")
+      .then((res) => res.json())
+      .then((data) => {
+        setbrandName(data);
+        console.log(data);
+      });
+  }, []);
 
   const createUser = (email, password) => {
     setloading(true);
@@ -64,6 +84,8 @@ const AuthContextProvider = ({ children }) => {
     googleLogin,
     githubLogin,
     logOut,
+    products,
+    brandName,
   };
 
   return <AuthContext.Provider value={Info}>{children}</AuthContext.Provider>;

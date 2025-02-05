@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import Hero from "../components/header/Hero";
 import BrandCard from "../components/BrandCard";
 import ProductCard from "../components/ProductCard";
@@ -14,28 +14,11 @@ import choose5 from "../assets/whyChoose/5.webp";
 import { AiFillLike } from "react-icons/ai";
 import TestimonialsSlide from "../components/TestimonialsSlide";
 import Contact from "../components/contact/Contact";
+import { AuthContext } from "../authContext/AuthContext";
 
 const Homepage = () => {
-  const [brandName, setbrandName] = useState([]);
-  const [products, setproducts] = useState([]);
   const [productslength, setproductslength] = useState(8);
-
-  useEffect(() => {
-    fetch("https://giga-gadgets-shop-server.vercel.app/products")
-      .then((res) => res.json())
-      .then((data) => {
-        setproducts(data);
-      });
-  }, []);
-
-  useEffect(() => {
-    fetch("https://giga-gadgets-shop-server.vercel.app/brands")
-      .then((res) => res.json())
-      .then((data) => {
-        setbrandName(data);
-        console.log(data);
-      });
-  }, []);
+  const { products, brandName } = useContext(AuthContext);
 
   return (
     <div className="bg-white">
