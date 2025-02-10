@@ -102,7 +102,7 @@ const ProductCard = ({ myproducts, item, handleProductDelete }) => {
                     </button>
 
                     <button
-                      onClick={() => handleProductDelete(_id)}
+                      onClick={() => handleProductDelete(_id, image)}
                       className="transition flex-1 ease-in duration-300 bg-gray-700 hover:bg-gray-800 border hover:border-gray-500 border-gray-700 hover:text-white  hover:shadow-lg text-white rounded py-2 md:py-1 text-center  flex justify-center items-center  font-medium text-sm"
                     >
                       <span>Delete</span>

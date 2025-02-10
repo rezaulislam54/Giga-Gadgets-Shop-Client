@@ -19,11 +19,14 @@ const CartProduct = ({ product, myproducts, setmyproducts }) => {
 
   const totalprice = price * totalquantity;
 
-  const handleProductDelete = (_id) => {
+  const handleProductDelete = (_id, photo) => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
       icon: "warning",
+      imageUrl: `${photo}`,
+      imageHeight: "100px",
+      imageWidth: "100px",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
@@ -53,7 +56,7 @@ const CartProduct = ({ product, myproducts, setmyproducts }) => {
   return (
     <div className=" relative grid items-center border grid-cols-6 md:px-8 mt-8">
       <div className="absolute top-4 right-5 text-xl font-bold">
-        <button onClick={() => handleProductDelete(_id)}>
+        <button onClick={() => handleProductDelete(_id, image)}>
           <RiDeleteBinLine className="text-2xl" />
         </button>
       </div>

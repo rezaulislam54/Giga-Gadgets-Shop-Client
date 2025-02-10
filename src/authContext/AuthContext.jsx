@@ -29,14 +29,15 @@ const AuthContextProvider = ({ children }) => {
       });
   }, [url]);
 
+  const urlBrand = "https://giga-gadgets-shop-server.vercel.app/brands";
   useEffect(() => {
-    fetch("https://giga-gadgets-shop-server.vercel.app/brands")
+    fetch(urlBrand)
       .then((res) => res.json())
       .then((data) => {
         setbrandName(data);
         console.log(data);
       });
-  }, []);
+  }, [urlBrand]);
 
   const createUser = (email, password) => {
     setloading(true);

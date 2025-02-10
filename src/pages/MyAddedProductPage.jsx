@@ -9,11 +9,14 @@ const MyAddedProductPage = () => {
   const [items, setitems] = useState();
   console.log(items);
 
-  const handleProductDelete = (_id) => {
+  const handleProductDelete = (_id, photo) => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
       icon: "warning",
+      imageUrl: `${photo}`,
+      imageWidth: 400,
+      imageHeight: 200,
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",

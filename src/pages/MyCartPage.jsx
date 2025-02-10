@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../authContext/AuthContext";
 import CartProduct from "../components/CartProduct";
 import { Helmet } from "react-helmet";
+import Swal from "sweetalert2";
 
 const MyCart = () => {
   const { user } = useContext(AuthContext);
@@ -16,6 +17,40 @@ const MyCart = () => {
         setmyproducts(data);
       });
   }, [url]);
+
+  const handleProductDelete = (email) => {
+    const remainingpro = "";
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(
+          `https://giga-gadgets-shop-server.vercel.app/carts/email/${email}`,
+          {
+            method: "DELETE",
+          }
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            setmyproducts(remainingpro);
+            if (data.deleteCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success",
+              });
+            }
+          });
+      }
+    });
+  };
 
   return (
     <div className="container mx-auto my-10">
@@ -90,6 +125,12 @@ const MyCart = () => {
           </div>
           <button className="bg-[#ff487c] w-full text-center py-2 rounded-md mb-2 text-white">
             CHECHOUT
+          </button>
+          <button
+            onClick={() => handleProductDelete(user.email)}
+            className="bg-[#ff487c] w-full mt-4 text-center py-2 rounded-md mb-2 text-white"
+          >
+            CLEAR ALL CART
           </button>
         </div>
       </div>
