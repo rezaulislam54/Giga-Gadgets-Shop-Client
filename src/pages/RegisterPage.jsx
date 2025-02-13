@@ -114,7 +114,9 @@ const RegisterPage = () => {
           <title>Giga-Gadgets | Sign Up</title>
         </Helmet>
         <div className="flex md:justify-between items-center justify-center flex-wrap gap-4">
-          <img className="h-[100px]" src={logo} alt="" />
+          <Link to={"/"}>
+            <img className="h-[100px]" src={logo} alt="" />
+          </Link>
           <div>
             Already a member?
             <Link

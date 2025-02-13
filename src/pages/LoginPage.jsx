@@ -104,7 +104,9 @@ const LoginPage = () => {
       </Helmet>
       {/* {loading && <Spinner />} */}
       <div className="flex md:justify-between items-center justify-center flex-wrap gap-4 ">
-        <img className="h-[100px]" src={logo} alt="" />
+        <Link to={"/"}>
+          <img className="h-[100px]" src={logo} alt="" />
+        </Link>
         <div>
           Not a member?
           <Link
