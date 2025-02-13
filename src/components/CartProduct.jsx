@@ -33,7 +33,7 @@ const CartProduct = ({ product, myproducts, setmyproducts }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://giga-gadgets-shop-server.vercel.app/carts/${_id}`, {
+        fetch(`https://giga-gadgets-server-six.vercel.app/carts/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

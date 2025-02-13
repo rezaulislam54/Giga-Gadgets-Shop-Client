@@ -49,7 +49,7 @@ const Routes = createBrowserRouter([
         element: <BrandProductPage></BrandProductPage>,
         loader: ({ params }) =>
           fetch(
-            `https://giga-gadgets-shop-server.vercel.app/products/brand/${params.brand}`
+            `https://giga-gadgets-server-six.vercel.app/products/brand/${params.brand}`
           ),
       },
       {
@@ -61,7 +61,7 @@ const Routes = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://giga-gadgets-shop-server.vercel.app/products/${params.id}`
+            `https://giga-gadgets-server-six.vercel.app/products/${params.id}`
           ),
       },
 
@@ -74,7 +74,7 @@ const Routes = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://giga-gadgets-shop-server.vercel.app/products/${params.id}`
+            `https://giga-gadgets-server-six.vercel.app/products/${params.id}`
           ),
       },
     ],

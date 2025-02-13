@@ -27,7 +27,7 @@ const ProductUpdate = () => {
     // console.log(info);
 
     fetch(
-      `https://giga-gadgets-shop-server.vercel.app/products/${loadededProduct._id}`,
+      `https://giga-gadgets-server-six.vercel.app/products/${loadededProduct._id}`,
       {
         method: "PUT",
         headers: { "Content-type": "application/json" },

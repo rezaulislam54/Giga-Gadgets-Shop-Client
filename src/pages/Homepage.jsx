@@ -20,7 +20,7 @@ const Homepage = () => {
   const [productslength, setproductslength] = useState(8);
   const { products, brandName, setbrandName } = useContext(AuthContext);
 
-  const urlBrand = "https://giga-gadgets-shop-server.vercel.app/brands";
+  const urlBrand = "https://giga-gadgets-server-six.vercel.app/brands";
   useEffect(() => {
     fetch(urlBrand)
       .then((res) => res.json())

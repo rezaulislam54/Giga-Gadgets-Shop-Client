@@ -9,7 +9,7 @@ import Swal from "sweetalert2";
 const MyCart = () => {
   const { user } = useContext(AuthContext);
   const [myproducts, setmyproducts] = useState([]);
-  const url = `https://giga-gadgets-shop-server.vercel.app/carts/email/${user?.email}`;
+  const url = `https://giga-gadgets-server-six.vercel.app/carts/email/${user?.email}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -31,7 +31,7 @@ const MyCart = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `https://giga-gadgets-shop-server.vercel.app/carts/email/${email}`,
+          `https://giga-gadgets-server-six.vercel.app/carts/email/${email}`,
           {
             method: "DELETE",
           }

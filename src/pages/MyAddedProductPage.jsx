@@ -23,7 +23,7 @@ const MyAddedProductPage = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://giga-gadgets-shop-server.vercel.app/products/${_id}`, {
+        fetch(`https://giga-gadgets-server-six.vercel.app/products/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -43,7 +43,7 @@ const MyAddedProductPage = () => {
     });
   };
 
-  const url = `https://giga-gadgets-shop-server.vercel.app/products/email/${user?.email}`;
+  const url = `https://giga-gadgets-server-six.vercel.app/products/email/${user?.email}`;
 
   useEffect(() => {
     fetch(url)

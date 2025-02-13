@@ -31,7 +31,7 @@ const AddProductPage = () => {
       email,
     };
 
-    fetch("https://giga-gadgets-shop-server.vercel.app/products", {
+    fetch("https://giga-gadgets-server-six.vercel.app/products", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(info),

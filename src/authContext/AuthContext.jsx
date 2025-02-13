@@ -20,7 +20,7 @@ const AuthContextProvider = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
 
-  const url = "https://giga-gadgets-shop-server.vercel.app/products";
+  const url = "https://giga-gadgets-server-six.vercel.app/products";
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -29,7 +29,7 @@ const AuthContextProvider = ({ children }) => {
       });
   }, [url]);
 
-  const urlBrand = "https://giga-gadgets-shop-server.vercel.app/brands";
+  const urlBrand = "https://giga-gadgets-server-six.vercel.app/brands";
   useEffect(() => {
     fetch(urlBrand)
       .then((res) => res.json())

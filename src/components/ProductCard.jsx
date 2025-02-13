@@ -14,7 +14,7 @@ const ProductCard = ({ myproducts, item, handleProductDelete }) => {
 
   const handleProductCart = (_id, name, brand, price, image, email) => {
     const Info = { _id, name, brand, price, image, email };
-    fetch("https://giga-gadgets-shop-server.vercel.app/carts", {
+    fetch("https://giga-gadgets-server-six.vercel.app/carts", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(Info),
